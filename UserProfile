@@ -1,0 +1,83 @@
+{
+  "name": "UserProfile",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "ID ng\u01b0\u1eddi d\u00f9ng li\u00ean k\u1ebft"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "T\u00ean hi\u1ec3n th\u1ecb"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "URL \u1ea3nh \u0111\u1ea1i di\u1ec7n"
+    },
+    "is_online": {
+      "type": "boolean",
+      "default": false,
+      "description": "Tr\u1ea1ng th\u00e1i online"
+    },
+    "last_active": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Th\u1eddi gian ho\u1ea1t \u0111\u1ed9ng g\u1ea7n nh\u1ea5t"
+    },
+    "bio": {
+      "type": "string",
+      "description": "Gi\u1edbi thi\u1ec7u b\u1ea3n th\u00e2n"
+    },
+    "is_banned": {
+      "type": "boolean",
+      "default": false,
+      "description": "B\u1ecb kh\u00f3a t\u00e0i kho\u1ea3n"
+    },
+    "ban_type": {
+      "type": "string",
+      "enum": [
+        "none",
+        "temporary",
+        "permanent"
+      ],
+      "default": "none"
+    },
+    "ban_until": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Kh\u00f3a \u0111\u1ebfn th\u1eddi gian"
+    },
+    "warnings": {
+      "type": "number",
+      "default": 0,
+      "description": "S\u1ed1 l\u1ea7n c\u1ea3nh c\u00e1o"
+    },
+    "chat_disabled": {
+      "type": "boolean",
+      "default": false,
+      "description": "T\u1ea1m kh\u00f3a nh\u1eafn tin"
+    },
+    "ai_daily_count": {
+      "type": "number",
+      "default": 0,
+      "description": "S\u1ed1 tin nh\u1eafn AI h\u00f4m nay"
+    },
+    "ai_daily_date": {
+      "type": "string",
+      "description": "Ng\u00e0y \u0111\u1ebfm AI (YYYY-MM-DD)"
+    },
+    "is_bot": {
+      "type": "boolean",
+      "default": false,
+      "description": "L\u00e0 t\u00e0i kho\u1ea3n bot AI t\u1ef1 tr\u1ea3 l\u1eddi"
+    },
+    "bot_persona": {
+      "type": "string",
+      "description": "M\u00f4 t\u1ea3 t\u00ednh c\u00e1ch bot"
+    }
+  },
+  "required": [
+    "user_id",
+    "display_name"
+  ]
+}
