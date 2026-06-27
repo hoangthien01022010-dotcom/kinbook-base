@@ -1,0 +1,48 @@
+{
+  "name": "Notification",
+  "type": "object",
+  "properties": {
+    "user_id": {
+      "type": "string",
+      "description": "Ng\u01b0\u1eddi nh\u1eadn th\u00f4ng b\u00e1o"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "message",
+        "friend_request",
+        "friend_accepted",
+        "group_added",
+        "group_removed",
+        "warning",
+        "ban",
+        "system"
+      ]
+    },
+    "title": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "related_id": {
+      "type": "string",
+      "description": "ID li\u00ean quan (conversation, friendship, etc)"
+    },
+    "from_user_name": {
+      "type": "string"
+    },
+    "from_user_avatar": {
+      "type": "string"
+    },
+    "is_read": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_id",
+    "type",
+    "title"
+  ]
+}
