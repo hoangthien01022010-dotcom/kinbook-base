@@ -1,0 +1,57 @@
+{
+  "name": "Report",
+  "type": "object",
+  "properties": {
+    "reporter_id": {
+      "type": "string"
+    },
+    "reporter_name": {
+      "type": "string"
+    },
+    "reported_user_id": {
+      "type": "string"
+    },
+    "reported_user_name": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "details": {
+      "type": "string"
+    },
+    "message_id": {
+      "type": "string",
+      "description": "ID tin nh\u1eafn vi ph\u1ea1m (n\u1ebfu c\u00f3)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "reviewing",
+        "resolved",
+        "dismissed"
+      ],
+      "default": "pending"
+    },
+    "admin_note": {
+      "type": "string"
+    },
+    "action_taken": {
+      "type": "string",
+      "enum": [
+        "none",
+        "warning",
+        "chat_disabled",
+        "temp_ban",
+        "perm_ban"
+      ],
+      "default": "none"
+    }
+  },
+  "required": [
+    "reporter_id",
+    "reported_user_id",
+    "reason"
+  ]
+}
