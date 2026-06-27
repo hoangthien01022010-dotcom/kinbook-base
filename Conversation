@@ -1,0 +1,65 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "direct",
+        "group"
+      ],
+      "default": "direct"
+    },
+    "name": {
+      "type": "string",
+      "description": "T\u00ean nh\u00f3m (cho group chat)"
+    },
+    "avatar_url": {
+      "type": "string",
+      "description": "\u1ea2nh nh\u00f3m"
+    },
+    "participant_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Danh s\u00e1ch ID th\u00e0nh vi\u00ean"
+    },
+    "participant_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "admin_id": {
+      "type": "string",
+      "description": "Tr\u01b0\u1edfng nh\u00f3m"
+    },
+    "last_message": {
+      "type": "string"
+    },
+    "last_message_time": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_message_sender": {
+      "type": "string"
+    },
+    "muted": {
+      "type": "boolean",
+      "default": false,
+      "description": "T\u1eaft th\u00f4ng b\u00e1o cu\u1ed9c tr\u00f2 chuy\u1ec7n"
+    },
+    "pinned_message_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "ID tin nh\u1eafn \u0111\u00e3 ghim"
+    }
+  },
+  "required": [
+    "type",
+    "participant_ids"
+  ]
+}
