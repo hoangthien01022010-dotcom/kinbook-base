@@ -1,0 +1,65 @@
+{
+  "name": "CallRoom",
+  "type": "object",
+  "properties": {
+    "room_code": {
+      "type": "string",
+      "description": "M\u00e3 ph\u00f2ng g\u1ecdi duy nh\u1ea5t (6 k\u00fd t\u1ef1)"
+    },
+    "host_id": {
+      "type": "string"
+    },
+    "host_name": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "description": "T\u00ean ph\u00f2ng g\u1ecdi"
+    },
+    "participant_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Danh s\u00e1ch ID th\u00e0nh vi\u00ean trong ph\u00f2ng"
+    },
+    "participant_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "participant_cameras": {
+      "type": "object",
+      "description": "Map user_id -> boolean (camera b\u1eadt/t\u1eaft)"
+    },
+    "participant_mics": {
+      "type": "object",
+      "description": "Map user_id -> boolean (mic b\u1eadt/t\u1eaft)"
+    },
+    "call_type": {
+      "type": "string",
+      "enum": [
+        "audio",
+        "video"
+      ],
+      "default": "video"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "ended"
+      ],
+      "default": "active"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "room_code",
+    "host_id"
+  ]
+}
