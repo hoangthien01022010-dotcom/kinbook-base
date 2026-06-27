@@ -1,0 +1,66 @@
+{
+  "name": "Message",
+  "type": "object",
+  "properties": {
+    "conversation_id": {
+      "type": "string",
+      "description": "ID cu\u1ed9c tr\u00f2 chuy\u1ec7n"
+    },
+    "sender_id": {
+      "type": "string"
+    },
+    "sender_name": {
+      "type": "string"
+    },
+    "sender_avatar": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string",
+      "description": "N\u1ed9i dung tin nh\u1eafn"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "text",
+        "image",
+        "video",
+        "file",
+        "system"
+      ],
+      "default": "text"
+    },
+    "file_url": {
+      "type": "string"
+    },
+    "file_name": {
+      "type": "string"
+    },
+    "is_recalled": {
+      "type": "boolean",
+      "default": false
+    },
+    "recalled_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "deleted_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs ng\u01b0\u1eddi \u0111\u00e3 x\u00f3a tin nh\u1eafn ph\u00eda h\u1ecd"
+    },
+    "read_by": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "IDs ng\u01b0\u1eddi \u0111\u00e3 xem"
+    }
+  },
+  "required": [
+    "conversation_id",
+    "sender_id"
+  ]
+}
